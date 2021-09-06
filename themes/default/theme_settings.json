@@ -1,0 +1,159 @@
+{
+	
+	"background_alpha": 0,
+	
+	"distance_between_players": {
+			"x": 0,
+			"y": 45
+	},
+	
+	"gauges": {
+		"name":{
+			"display": true,
+			"max_letters": 9,
+			
+			"position_from_player_origin": {
+				"x": 10,
+				"y": 1
+			}
+		},
+	
+		"hp": {
+			"background": "background_hp.png",
+			"filled": "hp.png",
+			
+			"position_from_player_origin": {
+				"x": 0,
+				"y": 10
+			},
+			
+			"padding_background_filled": {
+				"x": 6,
+				"y": 1
+			},
+			
+			"numbers": {
+				"align_right": true,
+				
+				"color": {
+					"75": {
+						"r": 1,
+						"g": 1,
+						"b": 0.5
+					},
+					"50": {
+						"r": 1,
+						"g": 0.75,
+						"b": 0.5
+					},
+					"25": {
+						"r": 1,
+						"g": 0.5,
+						"b": 0.5
+					}
+				},
+				
+				"position_relative_to_gauge":{
+						"x": 191,
+						"y": -9
+				}
+			}
+		},
+		
+		"mp": {
+			"background": "background_mp.png",
+			"filled": "mp.png",
+			
+			"padding_background_filled": {
+				"x": 4,
+				"y": 1
+			},
+			
+			"position_from_player_origin": {
+				"x": 101,
+				"y": 22
+			},
+			
+			"numbers": {
+				"small": true,
+				"align_right": true,
+				
+				"position_relative_to_gauge":{
+						"x": 105,
+						"y": -8
+				}
+			}
+		},
+		
+		"tp": { 
+			"background": "background_tp.png",
+			"filled": "tp1.png",
+			"filled2": "tp2.png",
+			"filled3": "tp3.png",
+			
+			"padding_background_filled": {
+				"x": 1,
+				"y": 1
+			},
+			
+			"numbers": {
+				"display": false,
+				"small": true,
+				
+				"position_relative_to_gauge":{
+						"x": 23,
+						"y": -5
+				}
+			},
+			
+			"position_from_player_origin": {
+				"x": 5,
+				"y": 22
+			}
+		}
+	},
+	
+	"font": {
+		"format": "png",
+		"has_small_version": true
+	}, 
+	
+	"cursor": {
+		"position_from_player_origin": {
+				"x": 0,
+				"y": 10
+		},
+			
+		"format": "png",
+		"number_images": 6,
+		
+		"cursor1": "1.png",
+		"cursor2": "2.png",
+		"cursor3": "3.png",
+		"cursor4": "4.png",
+		"cursor5": "5.png",
+		"cursor6": "6.png",
+		
+		"alpha": 0.5,
+		"change_after_x_frames": 5,
+		
+		"gap_with_gauges": 3
+		
+	},
+	
+	"buffs": {
+		"icon_size": 16,
+		"format": "png",
+		
+		"buffs_position_from_player_origin": {
+			"x": 215,
+			"y": 0
+		},
+		
+		"debuffs_position_from_player_origin": {
+			"x": 215,
+			"y": 19
+		}
+	}
+	
+}
