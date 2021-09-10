@@ -843,7 +843,7 @@ function hideHUD()
 end
 
 function isExpandedChat()
-	local pointer = ashita.memory.get_baseaddr("FFXiMain.dll")+0x5E0641
+	local pointer = ashita.memory.get_baseaddr("FFXiMain.dll")+0x5E0661
 	return ashita.memory.read_uint8(pointer) ~= 0
 end
 
