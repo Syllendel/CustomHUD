@@ -1,6 +1,6 @@
 _addon.author   = 'Syllendel (Syll#3694)';
 _addon.name     = 'customHud';
-_addon.version  = '0.2';
+_addon.version  = '0.25';
 
 require 'common'
 require 'd3d8'
@@ -296,6 +296,7 @@ function loadTheme(theme)
 				loadImage(letter .. "_maj", path .. "\\font\\" .. letter .. "_maj." .. config.ui.font.format)
 			end
 			loadImage("ellipsis", path .. "\\font\\" .. "ellipsis" .. "." .. config.ui.font.format)
+			loadImage("-", path .. "\\font\\" .. "-" .. "." .. config.ui.font.format)
 		end
 	end
 	
@@ -843,8 +844,12 @@ function hideHUD()
 end
 
 function isExpandedChat()
-	local pointer = ashita.memory.get_baseaddr("FFXiMain.dll")+0x5E0661
-	return ashita.memory.read_uint8(pointer) ~= 0
+	local pattern = "83EC??B9????????E8????????0FBF4C24??84C0"
+	local patternAddress = ashita.memory.findpattern("FFXiMain.dll", 0, pattern, 0x04, 0);
+	local chatExpandedPointer = ashita.memory.read_uint32(patternAddress)+0xF1
+	local chatExpandedValue = ashita.memory.read_uint8(chatExpandedPointer)
+	
+	return chatExpandedValue ~= 0
 end
 
 function drawCursor(cursorX, cursorY)
