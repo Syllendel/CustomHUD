@@ -297,6 +297,7 @@ function loadTheme(theme)
 			end
 			loadImage("ellipsis", path .. "\\font\\" .. "ellipsis" .. "." .. config.ui.font.format)
 			loadImage("-", path .. "\\font\\" .. "-" .. "." .. config.ui.font.format)
+			loadImage("'", path .. "\\font\\" .. "'" .. "." .. config.ui.font.format)
 		end
 	end
 	
